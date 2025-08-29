@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiración Consciente - El Poder del Aliento Sagrado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pantalla de Bienvenida -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <div class="welcome-content">
+                <h1 class="main-title">Respiración Consciente</h1>
+                <h2 class="subtitle">El Poder del Aliento Sagrado</h2>
+                <p class="intro-text">
+                    Descubre el poder transformador de la respiración consciente, donde la sabiduría ancestral 
+                    se encuentra con la neurociencia moderna. Cada respiración es una oportunidad de expansión, 
+                    sanación y despertar de tu verdadero potencial.
+                </p>
+                <div class="benefits-list">
+                    <div class="benefit-item">✨ Activación del complejo vagal ventral</div>
+                    <div class="benefit-item">🧠 Mayor claridad mental y coherencia neural</div>
+                    <div class="benefit-item">💫 Expansión de consciencia</div>
+                </div>
+                <button id="start-experience-btn" class="btn btn--primary btn--lg">
+                    Comenzar Experiencia
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Selección de Técnicas -->
+    <div id="techniques-screen" class="screen">
+        <div class="container">
+            <h2 class="section-title">Selecciona tu Técnica Sagrada</h2>
+            <div class="techniques-grid">
+                <div class="technique-card" data-technique="0">
+                    <div class="technique-header">
+                        <h3>Despertar Vagal</h3>
+                        <span class="duration">3-4 minutos</span>
+                    </div>
+                    <p class="technique-description">Técnica sagrada para activar el sistema nervioso parasimpático</p>
+                    <div class="pattern-display">4-7-8-0</div>
+                    <div class="cycles-info">4 ciclos recomendados</div>
+                </div>
+                
+                <div class="technique-card" data-technique="1">
+                    <div class="technique-header">
+                        <h3>Cuatro Direcciones</h3>
+                        <span class="duration">5-6 minutos</span>
+                    </div>
+                    <p class="technique-description">Ritual ancestral conectando con los cuatro puntos cardinales</p>
+                    <div class="pattern-display">4-4-4-4</div>
+                    <div class="cycles-info">8 ciclos recomendados</div>
+                </div>
+                
+                <div class="technique-card" data-technique="2">
+                    <div class="technique-header">
+                        <h3>Matriz Respiratoria</h3>
+                        <span class="duration">4-5 minutos</span>
+                    </div>
+                    <p class="technique-description">Conocimiento egipcio para reprogramar el campo electromagnético</p>
+                    <div class="pattern-display">6-2-7-2</div>
+                    <div class="cycles-info">6 ciclos recomendados</div>
+                </div>
+            </div>
+            <button id="back-to-welcome-btn" class="btn btn--outline">Volver</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Respiración -->
+    <div id="breathing-screen" class="screen">
+        <div class="container">
+            <div class="breathing-interface">
+                <h2 id="technique-name" class="technique-name"></h2>
+                
+                <div class="breathing-visual">
+                    <div id="breathing-circle" class="breathing-circle">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+                
+                <div id="instruction-text" class="instruction-text">Prepárate...</div>
+                
+                <div class="session-info">
+                    <div class="info-item">
+                        <span class="label">Ciclo:</span>
+                        <span id="current-cycle">0</span> / <span id="total-cycles">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Fase:</span>
+                        <span id="current-phase">Preparación</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Tiempo:</span>
+                        <span id="timer-display">00:00</span>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="play-pause-btn" class="btn btn--primary">
+                        Comenzar
+                    </button>
+                    <button id="change-technique-btn" class="btn btn--outline">
+                        Cambiar Técnica
+                    </button>
+                </div>
+                
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Finalización -->
+    <div id="completion-screen" class="screen">
+        <div class="container">
+            <div class="completion-content">
+                <h2 class="completion-title">✨ Sesión Completada ✨</h2>
+                <p class="completion-message">
+                    Felicitaciones por completar tu práctica de respiración consciente. 
+                    Has activado patrones neurológicos de coherencia y expansión.
+                </p>
+                
+                <div class="session-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="completed-cycles">0</span>
+                        <span class="stat-label">Ciclos Completados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="session-duration">0:00</span>
+                        <span class="stat-label">Tiempo Total</span>
+                    </div>
+                </div>
+                
+                <div class="pdf-form">
+                    <h3>Recibe tu Guía Completa</h3>
+                    <p>Obtén el PDF con técnicas detalladas, protocolo de 21 días y sabiduría ancestral</p>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="user-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="user-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="consent-checkbox" required>
+                                <span class="checkmark"></span>
+                                Acepto recibir la guía y comunicaciones relacionadas
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full-width">
+                            Descargar Guía PDF
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="new-session-btn" class="btn btn--outline">
+                        Nueva Sesión
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Descarga -->
+    <div id="download-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>¡Descarga Iniciada!</h3>
+            <p>Tu guía completa "Respiración Consciente y Sabiduría Ancestral" se está descargando.</p>
+            <p><strong>Contenido incluido:</strong></p>
+            <ul>
+                <li>Fundamentos científicos de la respiración consciente</li>
+                <li>Las tres técnicas sagradas paso a paso</li>
+                <li>Protocolo de transformación de 21 días</li>
+                <li>Creación de tu espacio sagrado de práctica</li>
+                <li>Conexión entre neurociencia y tradiciones ancestrales</li>
+            </ul>
+            <button id="close-modal-btn" class="btn btn--primary">Continuar</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
